@@ -2,10 +2,19 @@ pipeline {
 agent any
 
 stages {
-    stage ("HeHe"){
-        steps{
-            echo "Lmaooo"
-        }
-    }
+//<< Git SCM Checkout >>
+  stage('Git Checkout') {
+   steps {
+    checkout scm
+   }
+  }
+
 }
 }
+// stages {
+//     stage ("HeHe"){
+//         steps{
+//             echo "Lmaooo"
+//         }
+//     }
+// }
